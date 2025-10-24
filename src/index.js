@@ -14,6 +14,7 @@ const transactionRoutes = require('./routes/transactions');
 const streakRoutes = require('./routes/streaks');
 const paymentMethodRoutes = require('./routes/paymentMethods');
 const portfolioRoutes = require('./routes/portfolio');
+const blockchainRoutes = require('./routes/blockchain');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -60,6 +61,7 @@ app.use('/api/transactions', transactionRoutes);
 app.use('/api/streaks', streakRoutes);
 app.use('/api/payment-methods', paymentMethodRoutes);
 app.use('/api/portfolio', portfolioRoutes);
+app.use('/api/blockchain', blockchainRoutes);
 
 // 404 handler
 app.use((req, res) => {
